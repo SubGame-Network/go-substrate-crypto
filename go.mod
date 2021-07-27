@@ -1,9 +1,10 @@
-module github.com/JFJun/go-substrate-crypto
+module github.com/SubGame-Network/go-substrate-crypto
 
 go 1.13
 
 require (
 	github.com/ChainSafe/go-schnorrkel v0.0.0-20200626160457-b38283118816
+	github.com/JFJun/go-substrate-crypto v1.0.1
 	github.com/btcsuite/btcutil v1.0.2
 	github.com/cpacia/bchutil v0.0.0-20181003130114-b126f6a35b6c // indirect
 	github.com/ethereum/go-ethereum v1.9.24
