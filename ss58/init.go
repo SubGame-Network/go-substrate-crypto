@@ -31,6 +31,7 @@ var (
 	MathTestPrefix    = []byte{0x28}
 	SubstratePrefix   = []byte{0x2a}
 	ChainXPrefix      = []byte{0x2c}
+	SubGamePrefix     = []byte{0x1b}
 
 	//测试网
 	ChainXTestNetPrefix = SubstratePrefix

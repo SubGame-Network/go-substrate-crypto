@@ -120,3 +120,27 @@ func Test_ValidAddress(t *testing.T) {
 		panic(err)
 	}
 }
+
+func Test_DecodeSubGameAddress(t *testing.T) {
+	address := "3nJB8wRqk229Y9CdaBtmAnJ5fPScRw8dmavDnwwwexyfGnAX"
+	pub, err := ss58.DecodeToPub(address)
+	if err != nil {
+		t.Error(err)
+		return
+	}
+	fmt.Println(pub)
+	fmt.Println(hex.EncodeToString(pub))
+}
+
+func Test_EncodeSubGameAddress(t *testing.T) {
+	pub := "defae1ad1c108a23117c171aa622df7a1ee1e46013c8456d777bdb85157fea4a"
+	data, _ := hex.DecodeString(pub)
+	fmt.Println(len(data))
+	address, err := ss58.Encode(data, ss58.SubGamePrefix)
+	if err != nil {
+		t.Error(err)
+		return
+	}
+	fmt.Println(address)
+}
+
